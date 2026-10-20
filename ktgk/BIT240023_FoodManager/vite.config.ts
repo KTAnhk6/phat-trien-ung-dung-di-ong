@@ -1,0 +1,46 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      'react-native/Libraries/Utilities/codegenNativeComponent': path.resolve(__dirname, 'src/mockCodegen.ts'),
+      'react-native': 'react-native-web',
+    },
+    extensions: [
+      '.web.tsx',
+      '.web.ts',
+      '.web.jsx',
+      '.web.js',
+      '.tsx',
+      '.ts',
+      '.jsx',
+      '.js',
+    ],
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      resolveExtensions: [
+        '.web.tsx',
+        '.web.ts',
+        '.web.jsx',
+        '.web.js',
+        '.tsx',
+        '.ts',
+        '.jsx',
+        '.js',
+      ],
+    },
+  },
+  define: {
+    global: 'window',
+    __DEV__: JSON.stringify(true),
+    'process.env.NODE_ENV': JSON.stringify('development'),
+  },
+  server: {
+    port: 3000,
+    open: true,
+  },
+});

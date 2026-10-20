@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>BIT240023 - Food Manager</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background-color: #1A1A24;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      #phone-frame {
+        width: 100%;
+        max-width: 440px;
+        height: 100vh;
+        max-height: 900px;
+        background: #FFFFFF;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+      }
+      @media (min-width: 480px) {
+        #phone-frame {
+          height: 92vh;
+          border-radius: 28px;
+          border: 8px solid #2A2A38;
+        }
+      }
+      #root {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="phone-frame">
+      <div id="root"></div>
+    </div>
+    <script type="module" src="/src/index.web.tsx"></script>
+  </body>
+</html>

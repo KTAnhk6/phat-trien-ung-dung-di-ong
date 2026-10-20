@@ -1,0 +1,9 @@
+{
+  "name": "phat-trien-ung-dung-di-ong-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "web": "npm run web --prefix ktgk/BIT240023_FoodManager",
+    "android": "npm run android --prefix ktgk/BIT240023_FoodManager"
+  }
+}

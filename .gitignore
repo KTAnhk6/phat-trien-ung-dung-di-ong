@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Android & Gradle
+.gradle/
+**/.gradle/
+build/
+**/build/
+local.properties
+**/local.properties
+.cxx/
+**/.cxx/
+*.keystore
+!debug.keystore
+
+# Web bundle
+dist/
+**/dist/
+
+# Archives & Temporary
+*.zip
+.DS_Store
+.idea/
+**/.idea/
+.bundle/
+**/.bundle/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
